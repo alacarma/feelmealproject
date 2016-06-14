@@ -13,9 +13,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/ws_todo/getTagsData', getMTags.getData);
-app.get('/ws_todo/getTagsDetails', getMTags.getTagNames);
-app.get('/ws_todo/getMealsData', getMDetail.getmealsData);
+app.get('/getTagsData', getMTags.getData);
+app.get('/getTagsDetails', getMTags.getTagNames);
+app.get('/getMealsData', getMDetail.getmealsData);
 
 app.listen(port);
 
