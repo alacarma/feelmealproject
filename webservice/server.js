@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-var todoAction = require('./todoActionsController');
+var getMTags = require('./getMealTags');
+var getMDetail = require('./getMealsdata');
 var port = process.env.PORT || 3000;
 
 app.set('port', port);
@@ -12,8 +13,9 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/ws_todo/getActionsData', todoAction.getData);
-app.get('/ws_todo/saveActionsData', todoAction.saveData);
+app.get('/ws_todo/getTagsData', getMTags.getData);
+app.get('/ws_todo/getTagsDetails', getMTags.getTagNames);
+app.get('/ws_todo/getMealsData', getMDetail.getmealsData);
 
 app.listen(port);
 

@@ -1,56 +1,44 @@
 
 var todoApp = angular.module('todoApp',[]);
-
-todoApp.filter("checkedItems", function() {
-    return function(items, showComplete) {
-        var resultArr = [];
-        angular.forEach(items,function(item) {
-            if(item.done==false || showComplete == true) {
-                resultArr.push(item);
-            };
-        });
-        return resultArr;
-    };
-});
-var model = {
-    user:"Ala",
-};
+var model;
+var model2;
+var mealMode;
 
 todoApp.run(function($http) {
-    $http.get("http://localhost:3000/ws_todo/getActionsData").success(function(data){
+    $http.get("http://localhost:3000/ws_todo/getTagsData").success(function(data){
         console.log(data);
-        model.items = data;
+        model = data;
     });
 });
 
-todoApp.controller('ToDoCtrl',function($scope) {
-    $scope.todo = model;
-
-    $scope.incompleteCount = function() {
-        var count=0;
-        angular.forEach($scope.todo.items, function(item) {
-            if(!item.done) {count++;}
-        });
-        return count;
-    };
-    $scope.warningLevel = function () {
-        return $scope.incompleteCount() < 3 ? "label-success":"label-warning";
-    };
-    $scope.addNewItem = function(actionText) {
-        $scope.todo.items.push({ action: actionText, done:false});
-    };
+todoApp.run(function($http) {
+    $http.get("http://localhost:3000/ws_todo/getTagsDetails").success(function(data){
+        console.log(data);
+        model2 = data;
+    });
 });
 
+todoApp.controller('ToDoCtrl', function($scope, $http) {
+    $http.get("http://localhost:3000/ws_todo/getTagsData")
+    .then(function(response) {
+        $scope.myWelcome = response.data;
+        $scope.firstTag = response.data[1];
+    });
+});
 
-
-
-
- /*  app.controller('firstController', function ($scope) {
-$scope.first = 'Ragnar';
- $scope.last = 'Lodbrok';
- $scope.heading = "The king's message: ";
-
- $scope.updateMsg = function() {
- $scope.msg = "Hello, "+ $scope.first + " " + $scope.last;
- };
- }); */
+todoApp.run(function($http) {
+    $http.get("http://localhost:3000/ws_todo/getMealsData").success(function(data){
+        console.log(data);
+        mealMode = data;
+    });
+});
+todoApp.controller('mealCtrl', function($scope, $http) {
+    $http.get("http://localhost:3000/ws_todo/getMealsData")
+    .then(function(response) {
+        $scope.myMeals = response.data;
+        $scope.firstMeal = response.data[0];
+        $scope.scndMeal = response.data[1];
+        $scope.thrdMeal = response.data[2];
+        $scope.frthMeal = response.data[3]; 
+    });
+});

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 config = {
-mongoUrl:'mongodb://alacarma:312370216@ds019633.mlab.com:19633/todo'
+mongoUrl:'mongodb://feelmeal:feelmealpsd@ds011374.mlab.com:11374/feelmeal'
 };
 //The server option auto_reconnect is defaulted to true
 var options = {

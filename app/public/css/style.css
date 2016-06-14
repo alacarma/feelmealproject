@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+*{
+    margin:0px;
+    padding:0px;
+}
+nav, main, section, footer, header {
+    display: block;
+}
+.clear {
+    clear: both;
+}
+.container {
+    width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+header {
+    position: absolute;
+    width: 750px;
+}
+#logo {
+    display: block;
+    background: url('../data/logo1.png');
+    width: 99px;
+    height: 57px;
+    vertical-align: center;
+    margin-top: 38px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.hot {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+
+
+}
+.hotwrap {
+    width: 300px;
+    margin: 0 auto;
+    color: #ffffff;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    padding-top: 550px;
+
+}
+.hot article {
+    font-size: 240%;
+    font-weight: 700;
+    background: #d50000;
+    width: 300px;
+    text-align: left;
+    padding: 5px;
+}
+.hot .hot1 { 
+    font-size: 400%;
+    font-weight: 700;
+    background: #d50000;
+    width: 160px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+ .meat {
+    background: url('../data/meat.jpg'); background-repeat: none;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.meat article {
+    font-size: 240%;
+    font-weight: 700;
+    background: #ff6136;
+    width: 140px;
+    text-align: left;
+    padding: 5px;
+}
+.meat .hot1 { 
+    font-size: 450%;
+    font-weight: 700;
+    background: #ff6136;
+    width: 210px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+.spicy {
+    background: url('../data/spicy.jpg'); background-repeat: none;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.spicy article {
+    font-size: 160%;
+    font-weight: 700;
+    background: #ff8a00;
+    width: 140px;
+    text-align: left;
+    padding: 5px;
+}
+.spicy .hot1 { 
+    font-size: 450%;
+    font-weight: 700;
+    background: #ff8a00;
+    width: 220px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+.carbs {
+    background: url('../data/carbs.jpg'); background-repeat: none;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.carbs article {
+    font-size: 160%;
+    font-weight: 700;
+    background: #ffde00;
+    width: 175px;
+    text-align: left;
+    padding: 5px;
+}
+.carbs .hot1 { 
+    font-size: 450%;
+    font-weight: 700;
+    background: #ffde00;
+    width: 245px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+.healthy {
+    background: url('../data/healthy.jpg'); background-repeat: none;
+    width: 100%;
+    height: 650px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.healthy article {
+    font-size: 170%;
+    font-weight: 700;
+    background: #9bcd03;
+    width: 145px;
+    text-align: left;
+    padding: 5px;
+}
+.healthy .hot1 { 
+    font-size: 420%;
+    font-weight: 700;
+    background: #9bcd03;
+    width: 300px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+.fresh {
+    background: url('../data/fresh.jpg'); background-repeat: none;
+    width: 100%;
+    height: 650px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.fresh article {
+    font-size: 170%;
+    font-weight: 700;
+    background: #04d06e;
+    width: 150px;
+    text-align: left;
+    padding: 5px;
+}
+.fresh .hot1 { 
+    font-size: 400%;
+    font-weight: 700;
+    background: #04d06e;
+    width: 210px;
+    margin-top: 5px;
+    text-align: left;
+
+ }
+.sweet {
+    background: url('../data/sweet.jpg'); background-repeat: none;
+    width: 100%;
+    height: 650px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 500px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.sweet article {
+    font-size: 170%;
+    font-weight: 700;
+    background: #d52658;
+    width: 150px;
+    text-align: left;
+    padding: 5px;
+}
+.sweet .hot1 { 
+    font-size: 420%;
+    font-weight: 700;
+    background: #d52658;
+    width: 230px;
+    margin-top: 5px;
+    text-align: left;
+
+ }

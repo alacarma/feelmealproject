@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>FeelMeal | Meat</title>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.excoloSlider.js"></script>
+    <link href="css/jquery.excoloSlider.css" rel="stylesheet" />
+    <script>
+        $(function () {
+            $("#sliderA").excoloSlider();
+            $("#sliderB").excoloSlider();
+            $("#sliderC").excoloSlider();
+            $("#sliderD").excoloSlider();
+        });
+    </script>
+</head>
+<body ng-controller="ToDoCtrl">	
+    <div>
+    <header ng-model="firstTag">
+    {{firstTag.name}}
+    </header>
+	<div class="container_12">
+		<div class="grid_8" ng-controller="mealCtrl">
+			<div id="sliderA" class="slider">
+                <article ng-model="firstMeal">
+                    <article class="mealtext"><span class="ml">{{firstMeal.name}}</span> <span>{{firstMeal.size}}</span>
+                    <br><span class="prce">
+                    {{firstMeal.price}}
+                    </span>
+                    </article>
+                    <img ng-src="{{firstMeal.img_url}}">
+                </article>
+				<img ng-src="{{scndMeal.img_url}}">
+				<img ng-src="{{thrdMeal.img_url}}">
+				<img ng-src="{{frthMeal.img_url}}">
+			</div>			
+		</div>
+	</div>
+    <div class="container_12">
+        <div class="grid_8" ng-controller="mealCtrl">
+            <div id="sliderB" class="slider">
+                <img ng-src="{{firstMeal.img_url}}"> 
+                <img ng-src="{{scndMeal.img_url}}">
+                <img ng-src="{{thrdMeal.img_url}}">
+                <img ng-src="{{frthMeal.img_url}}">
+            </div>          
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="grid_8" ng-controller="mealCtrl">
+            <div id="sliderC" class="slider">
+                <img ng-src="{{firstMeal.img_url}}"> 
+                <img ng-src="{{scndMeal.img_url}}">
+                <img ng-src="{{thrdMeal.img_url}}">
+                <img ng-src="{{frthMeal.img_url}}">
+            </div>          
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="grid_8" ng-controller="mealCtrl">
+            <div id="sliderD" class="slider">
+                <img ng-src="{{firstMeal.img_url}}"> 
+                <img ng-src="{{scndMeal.img_url}}">
+                <img ng-src="{{thrdMeal.img_url}}">
+                <img ng-src="{{frthMeal.img_url}}">
+            </div>          
+        </div>
+    </div>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/todo.js"></script>
+</body>
+</html>
