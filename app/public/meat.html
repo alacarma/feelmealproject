@@ -24,16 +24,37 @@
 		<div class="grid_8" ng-controller="mealCtrl">
 			<div id="sliderA" class="slider">
                 <article ng-model="firstMeal">
-                    <article class="mealtext"><span class="ml">{{firstMeal.name}}</span> <span>{{firstMeal.size}}</span>
-                    <br><span class="prce">
-                    {{firstMeal.price}}
-                    </span>
-                    </article>
+                        <span class="ml">{{firstMeal.name}}<span class = "size">{{firstMeal.size}}</span></span> 
+                        
+                        <br><span class="prce">{{firstMeal.price}}</span>
                     <img ng-src="{{firstMeal.img_url}}">
+                    <img ng-src="{{firstMeal.like}}" ng-click="changebgk()" class = "like">
                 </article>
-				<img ng-src="{{scndMeal.img_url}}">
-				<img ng-src="{{thrdMeal.img_url}}">
-				<img ng-src="{{frthMeal.img_url}}">
+                <article ng-model="scndMeal">
+                    <span class="ml">{{scndMeal.name}}<span class = "size">{{scndMeal.size}}</span></span> 
+                        
+                        <br><span class="prce">{{scndMeal.price}}</span>
+                    <img ng-src="{{scndMeal.img_url}}">
+                    <img ng-src="{{scndMeal.like}}" class = "like">
+                </article>
+                <article ng-model="thrdMeal">
+                    <span class="ml">{{thrdMeal.name}}<span class = "size">{{thrdMeal.size}}</span></span> 
+                        
+                        <br><span class="prce">{{thrdMeal.price}}</span>
+                    <img ng-src="{{thrdMeal.img_url}}">
+                    <img ng-src="{{thrdMeal.like}}" class = "like">
+                </article>
+                <article ng-model="frthMeal">
+                    <span class="ml">{{frthMeal.name}} <span class = "size">{{frthMeal.size}}</span></span> 
+                        
+                        <br><span class="prce">{{frthMeal.price}}</span>
+                    <img ng-src="{{frthMeal.img_url}}">
+                    <img ng-src="{{frthMeal.like}}" class = "like">
+                </article>
+
+				
+				
+				
 			</div>			
 		</div>
 	</div>

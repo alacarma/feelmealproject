@@ -10,13 +10,15 @@
     <header>
        <a href="index.html" id="logo"></a> 
     </header>
-    <section class= "hot" ng-repeat="person in myWelcome">
-        <section class="hotwrap">
-            <article>{{person.title}}</article>
-            <article class = "hot1">{{person.stitle}}</article>
+    <a href="http://localhost:8080/meat.html"> 
+        <section class= "hot" ng-repeat="person in myWelcome">
+            <section class="hotwrap">
+                <article>{{person.title}}</article>
+                <article class = "hot1">{{person.stitle}}</article>
+            </section>
+            <img ng-src="{{person.image_url}}">        
         </section>
-        <img ng-src="{{person.image_url}}">        
-    </section>
+    </a>
     <script src="js/lib/angular/angular.min.js"></script>
     <script src="js/todo.js"></script>
     </div>

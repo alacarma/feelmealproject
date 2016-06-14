@@ -8,7 +8,7 @@ var actionSchema1 = new schema({
     size: String,
     price: String,
     logo: String,
-    like: Boolean,
+    like: String,
     tags: Array
 }, {collection:'meals'});
 

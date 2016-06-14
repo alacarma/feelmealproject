@@ -2,10 +2,16 @@
 
 /* slider
 ----------------------------------------------------------*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 .container {
     width: 750px;
     margin: 0 auto;
     position: relative;
+    top: 0px;
 }
 header{
     width:100%;
@@ -18,24 +24,48 @@ header{
     font-weight: bold;
     color: #ffffff;
 }
-.mealtext {
-    font-family: 'Droid Sans', sans-serif;
-    color: #ffffff;
+
+.like {
     position: absolute;
-    margin-left: 60px;
-    margin-top: 70px;
+    top: 60px;
+    left: 650px;
 }
+
+.logores{
+    position: absolute;
+    left: 70px;
+}
+
 .ml {
+    font-family: 'Droid Sans', sans-serif;
     background: #ff6136;
     font-weight: bold;
     color: #ffffff;
     font-size: 40px;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 70px;
+
 }
+
+.size {
+    
+    font-family: 'Droid Sans', sans-serif;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    background: #ffffff;
+    margin-left: 10px;
+}
+
 .prce {
+    position: absolute;
+    font-family: 'Droid Sans', sans-serif;
     background: #000000;
     color: #ffffff; 
     font-size: 20px;
-    padding: 20px;
+    margin-left: 60px;
+    margin-top: 115px;
 }
 .slide > * {
     max-width: 100%;
