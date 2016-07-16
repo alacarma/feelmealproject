@@ -2,16 +2,20 @@
 <html ng-app="todoApp">
  <head>
  <title>FeelMeal</title>
+  <meta name="google-signin-client_id" content="1027994202724-46b90dsip9f558gennvl349gj4mtr23r.apps.googleusercontent.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
  <script language="JavaScript" src="js/jquery.js"></script> 
   <link rel="stylesheet" href="css/style.css">  
  </head>
  <body ng-controller="ToDoCtrl">
+ <div id="overlay" class="cover blur-in">
+  <div class="content">
     <div class="container">
     <header>
        <a href="index.html" id="logo"></a> 
     </header>
     <a href="meat.html"> 
-        <section class= "hot" ng-repeat="person in myWelcome">
+        <section  ng-repeat="person in myWelcome" ng-class="person.name">
             <section class="hotwrap">
                 <article>{{person.title}}</article>
                 <article class = "hot1">{{person.stitle}}</article>
@@ -22,5 +26,34 @@
     <script src="js/lib/angular/angular.min.js"></script>
     <script src="js/todo.js"></script>
     </div>
+  </div>
+  <footer>Eat your feels</footer>
+</div>
+
+<div class="row pop-up">
+  <div class="box small-6 large-centered">
+    <h3>Welcome to FeelMeal</h3>
+    <div id="my-signin2"></div>
+  </div>
+</div>
+
+  <script>
+$(function() {
+  $('.pop-up').hide();
+  $('.pop-up').fadeIn(0000);
+  
+      $('#my-signin2').click(function (e) { 
+
+      $('.pop-up').fadeOut(700);
+      $('#overlay').removeClass('blur-in');
+      $('#overlay').addClass('blur-out');
+      e.stopPropagation();
+        
+    });
+ });
+
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
  </body>
  </html>

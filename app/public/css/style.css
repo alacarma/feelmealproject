@@ -37,7 +37,7 @@ header {
     margin: 0 auto;
     text-align: center;
     font-family: 'Droid Sans', sans-serif;
-
+    height: 1208px;
 
 }
 .hotwrap {
@@ -70,12 +70,10 @@ header {
 
  }
  .meat {
-    background: url('../data/meat.jpg'); background-repeat: none;
     width: 100%;
     height: 700px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 500px;
     font-family: 'Droid Sans', sans-serif;
 
 }
@@ -97,7 +95,6 @@ header {
 
  }
 .spicy {
-    background: url('../data/spicy.jpg'); background-repeat: none;
     width: 100%;
     height: 700px;
     margin: 0 auto;
@@ -107,10 +104,10 @@ header {
 
 }
 .spicy article {
-    font-size: 160%;
+    font-size: 240%;
     font-weight: 700;
     background: #ff8a00;
-    width: 140px;
+    width: 225px;
     text-align: left;
     padding: 5px;
 }
@@ -124,7 +121,6 @@ header {
 
  }
 .carbs {
-    background: url('../data/carbs.jpg'); background-repeat: none;
     width: 100%;
     height: 700px;
     margin: 0 auto;
@@ -134,10 +130,10 @@ header {
 
 }
 .carbs article {
-    font-size: 160%;
+    font-size: 240%;
     font-weight: 700;
     background: #ffde00;
-    width: 175px;
+    width: 280px;
     text-align: left;
     padding: 5px;
 }
@@ -151,7 +147,6 @@ header {
 
  }
 .healthy {
-    background: url('../data/healthy.jpg'); background-repeat: none;
     width: 100%;
     height: 650px;
     margin: 0 auto;
@@ -161,10 +156,10 @@ header {
 
 }
 .healthy article {
-    font-size: 170%;
+    font-size: 240%;
     font-weight: 700;
     background: #9bcd03;
-    width: 145px;
+    width: 215px;
     text-align: left;
     padding: 5px;
 }
@@ -178,7 +173,6 @@ header {
 
  }
 .fresh {
-    background: url('../data/fresh.jpg'); background-repeat: none;
     width: 100%;
     height: 650px;
     margin: 0 auto;
@@ -188,10 +182,10 @@ header {
 
 }
 .fresh article {
-    font-size: 170%;
+    font-size: 240%;
     font-weight: 700;
     background: #04d06e;
-    width: 150px;
+    width: 220px;
     text-align: left;
     padding: 5px;
 }
@@ -205,7 +199,6 @@ header {
 
  }
 .sweet {
-    background: url('../data/sweet.jpg'); background-repeat: none;
     width: 100%;
     height: 650px;
     margin: 0 auto;
@@ -215,10 +208,10 @@ header {
 
 }
 .sweet article {
-    font-size: 170%;
+    font-size: 240%;
     font-weight: 700;
     background: #d52658;
-    width: 150px;
+    width: 220px;
     text-align: left;
     padding: 5px;
 }
@@ -231,3 +224,435 @@ header {
     text-align: left;
 
  }
+
+
+#my-signin2 {
+padding: 50px;
+}
+
+.cover {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.blur-in {
+    -webkit-animation: blur 2s forwards;
+    -moz-animation: blur 2s forwards;
+    -o-animation: blur 2s forwards;
+    animation: blur 2s forwards;
+}
+
+.blur-out {
+    -webkit-animation: blur-out 2s forwards;
+    -moz-animation: blur-out 2s forwards;
+    -o-animation: blur-out 2s forwards;
+    animation: blur-out 2s forwards;
+}
+
+@-webkit-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-moz-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-o-keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur {
+    0% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+
+    100% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+}
+
+@-webkit-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-moz-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@-o-keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+@keyframes blur-out {
+    0% {
+        -webkit-filter: blur(4px);
+        -moz-filter: blur(4px);
+        -o-filter: blur(4px);
+        -ms-filter: blur(4px);
+        filter: blur(4px);
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+        filter: blur(0px);
+    }
+}
+
+.content {
+    margin: 0 auto;
+}
+
+.pop-up {
+    position: fixed;
+    margin: 5% auto;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.box {
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 10%;
+    position: relative;
+    -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.1);
+}
+
+h3 {
+    font-family: helvetica;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #fff;
+    background-color: #d50000;
+}
+.row {
+    width: 340px;
+
+}
+footer {
+    display: none;
+}
+
+@media (min-width: 751px) {
+    .container {
+        width: 100%;
+    }
+    header {
+        height: 200px;
+        background-color: #000000;
+        width: 100%;
+        
+    }
+    .hot {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Droid Sans', sans-serif;
+
+
+    }
+    .hot img {
+        display: none;
+    }
+    .hotwrap {
+        margin: 0 auto;
+        color: #ffffff;
+        border-bottom: 3px solid #000000;
+        width: 1000px;
+        padding-bottom: 30px;
+        height: 200px;
+
+
+
+    }
+    .hot article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #d50000;
+        width: 300px;
+        text-align: left;
+        padding: 5px;
+    }
+    .hot .hot1 { 
+        font-size: 400%;
+        font-weight: 700;
+        background: #d50000;
+        width: 160px;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .meat {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+    }
+    .meat article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #ff6136;
+        width: 140px;
+        text-align: left;
+        padding: 5px;
+    }
+    .meat .hot1 { 
+        font-size: 450%;
+        font-weight: 700;
+        background: #ff6136;
+        width: 210px;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .spicy {
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+
+    }
+    .spicy article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #ff8a00;
+        text-align: left;
+        padding: 5px;
+        width: 225px;
+    }
+    .spicy .hot1 { 
+        font-size: 450%;
+        font-weight: 700;
+        background: #ff8a00;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .carbs {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+    }
+    .carbs article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #ffde00;
+        text-align: left;
+        padding: 5px;
+        width: 280px;
+    }
+    .carbs .hot1 { 
+        font-size: 450%;
+        font-weight: 700;
+        background: #ffde00;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .healthy {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+    }
+    .healthy article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #9bcd03;
+        text-align: left;
+        padding: 5px;
+        width: 215px;
+    }
+    .healthy .hot1 { 
+        font-size: 420%;
+        font-weight: 700;
+        background: #9bcd03;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .fresh {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+    }
+    .fresh article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #04d06e;
+        text-align: left;
+        padding: 5px;
+        width: 225px;
+    }
+    .fresh .hot1 { 
+        font-size: 400%;
+        font-weight: 700;
+        background: #04d06e;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+    .sweet {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Droid Sans', sans-serif;
+
+    }
+    .sweet article {
+        font-size: 240%;
+        font-weight: 700;
+        background: #d52658;
+        text-align: left;
+        padding: 5px;
+        width: 225px;
+    }
+    .sweet .hot1 { 
+        font-size: 420%;
+        font-weight: 700;
+        background: #d52658;
+        margin-top: 5px;
+        text-align: left;
+
+     }
+
+     .spicy img {
+        display: none;
+     }
+     .carbs img {
+        display: none;
+     }
+     .healthy img {
+        display: none;
+     }
+     .fresh img {
+        display: none;
+     }
+     .meat img {
+        display: none;
+     }
+     .sweet img {
+        display: none;
+     }
+
+footer {
+    height: 200px;
+    background-color: #000000;
+    margin-top: 100px;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    padding-top: 100px;
+}
+
+}
+

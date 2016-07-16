@@ -7,88 +7,125 @@
     <script src="js/jquery.excoloSlider.js"></script>
     <link href="css/jquery.excoloSlider.css" rel="stylesheet" />
     <script>
-        $(function () {
-            $("#sliderA").excoloSlider();
-            $("#sliderB").excoloSlider();
-            $("#sliderC").excoloSlider();
-            $("#sliderD").excoloSlider();
-        });
+
     </script>
 </head>
 <body ng-controller="ToDoCtrl">	
-    <div>
-    <header ng-model="firstTag">
-    {{firstTag.name}}
-    </header>
-	<div class="container_12">
-		<div class="grid_8" ng-controller="mealCtrl">
-			<div id="sliderA" class="slider">
-                <article ng-model="firstMeal">
-                        <span class="ml">{{firstMeal.name}}<span class = "size">{{firstMeal.size}}</span></span> 
-                        
-                        <br><span class="prce">{{firstMeal.price}}</span>
-                    <img ng-src="{{firstMeal.img_url}}">
-                    <img ng-src="{{firstMeal.like}}" ng-click="changebgk()" class = "like">
-                </article>
-                <article ng-model="scndMeal">
-                    <span class="ml">{{scndMeal.name}}<span class = "size">{{scndMeal.size}}</span></span> 
-                        
-                        <br><span class="prce">{{scndMeal.price}}</span>
-                    <img ng-src="{{scndMeal.img_url}}">
-                    <img ng-src="{{scndMeal.like}}" class = "like">
-                </article>
-                <article ng-model="thrdMeal">
-                    <span class="ml">{{thrdMeal.name}}<span class = "size">{{thrdMeal.size}}</span></span> 
-                        
-                        <br><span class="prce">{{thrdMeal.price}}</span>
-                    <img ng-src="{{thrdMeal.img_url}}">
-                    <img ng-src="{{thrdMeal.like}}" class = "like">
-                </article>
-                <article ng-model="frthMeal">
-                    <span class="ml">{{frthMeal.name}} <span class = "size">{{frthMeal.size}}</span></span> 
-                        
-                        <br><span class="prce">{{frthMeal.price}}</span>
-                    <img ng-src="{{frthMeal.img_url}}">
-                    <img ng-src="{{frthMeal.like}}" class = "like">
-                </article>
+     <div id="overlay" class="cover blur-in">
 
-				
-				
-				
-			</div>			
-		</div>
-	</div>
-    <div class="container_12">
-        <div class="grid_8" ng-controller="mealCtrl">
-            <div id="sliderB" class="slider">
-                <img ng-src="{{firstMeal.img_url}}"> 
-                <img ng-src="{{scndMeal.img_url}}">
-                <img ng-src="{{thrdMeal.img_url}}">
-                <img ng-src="{{frthMeal.img_url}}">
-            </div>          
+    <header ng-model="firstTag">
+    {{firstTag.cname}}
+    <a href="#popup3" id="filtermenu"> </a>
+    </header>
+
+  <div class="container" id="mCategories">
+        <div ng-controller="mealCtrl">
+                <article ng-repeat="i in myMeals" class= "holder">
+                        <span class="ml">{{i.name}}<span class = "size">{{i.size}}</span></span>   
+                        <br><span class="prce">{{i.price}}</span>
+                    <img ng-src="{{i.img_url}}">
+                    <img ng-src="{{i.like}}" ng-click="func(i.like, i.id, i.counter)" class = "like">
+                
+                <div class="box1">
+                    <a href="#popup1"> <img src="images/ordernow.png" class= "ordern"></a>
+                </div>
+
+                <div id="popup1" class="overlay1">
+                    <div class="popup2">
+                        <section class="ordpop"> Your feels<br>will be ready in</section>
+                        <a class="close" href="#">&times;</a>
+                        <div class="content">
+                            <time id="countdown"></time>
+                        </div>
+                        <section class="ordpop"> Thanks for ordering <br> FeelMeal</section>
+                    </div>
+                </div>
+                
+                </article>
+        </div>
+        
+
+    <div id="popup3" class="overlay2">
+        <div class="popup4">
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                 <ul class ="hmenu">
+                        <li><a href="#"> Favorites </a></li>
+                        <li><a href="#"> Familiar &amp; New </a></li>
+                        <li><a href="#"> Medium Dishes</a></li>
+                    <div class="clear"></div>
+                    </ul>
+                    <ul class="menutags">
+                        <li><a href="#" id="HOT"> HOT </a></li>
+                        <li><a href="#" id="MEAT"> MEAT </a></li>
+                        <li><a href="#" id="SPICY"> SPICY </a></li>
+                        <li><a href="#" id="CARBS"> CARBS </a></li>
+                        <li><a href="#" id="HEALTHY"> HEALTHY </a></li>
+                        <li><a href="#" id="FRESH"> FRESH </a></li>
+                        <li><a href="#" id="Sweets"> SWEET </a></li>
+                    </ul>
+
+                </div>
         </div>
     </div>
-    <div class="container_12">
-        <div class="grid_8" ng-controller="mealCtrl">
-            <div id="sliderC" class="slider">
-                <img ng-src="{{firstMeal.img_url}}"> 
-                <img ng-src="{{scndMeal.img_url}}">
-                <img ng-src="{{thrdMeal.img_url}}">
-                <img ng-src="{{frthMeal.img_url}}">
-            </div>          
-        </div>
+
+
     </div>
-    <div class="container_12">
-        <div class="grid_8" ng-controller="mealCtrl">
-            <div id="sliderD" class="slider">
-                <img ng-src="{{firstMeal.img_url}}"> 
-                <img ng-src="{{scndMeal.img_url}}">
-                <img ng-src="{{thrdMeal.img_url}}">
-                <img ng-src="{{frthMeal.img_url}}">
-            </div>          
-        </div>
     </div>
+    </div>
+    </div>
+
+
+
+
+<!--    <div class="row pop-up" >
+    <div class="box small-6 large-centered">
+    <a class="close2" href="#">&times;</a>
+    <ul class ="hmenu">
+        <li><a href="#"> Favorites </a></li>
+        <li><a href="#"> Familiar &amp; New </a></li>
+        <li><a href="#"> Medium Dishes</a></li>
+    <div class="clear"></div>
+    </ul>
+    <ul class="menutags">
+        <li><a href="#" id="HOT"> HOT </a></li>
+        <li><a href="#" id="MEAT"> MEAT </a></li>
+        <li><a href="#" id="SPICY"> SPICY </a></li>
+        <li><a href="#" id="CARBS"> CARBS </a></li>
+        <li><a href="#" id="HEALTHY"> HEALTHY </a></li>
+        <li><a href="#" id="FRESH"> FRESH </a></li>
+        <li><a href="#" id="Sweets"> SWEET </a></li>
+    </ul>
+
+  </div>
+</div> -->
     <script src="js/lib/angular/angular.min.js"></script>
     <script src="js/todo.js"></script>
+    <script>
+/*        $(function() {
+            $('.pop-up').hide();
+            $('#overlay').removeClass('blur-in');
+
+      
+          $('#filtermenu').click(function (e) { 
+              $('.pop-up').fadeIn();
+              $('#overlay').removeClass('blur-out');
+              $('#overlay').addClass('blur-in');
+              e.stopPropagation();
+                
+    });
+ }); */
+
+    $(function(){
+        $('#Sweets').click(changeContS);
+        $('#HOT').click(changeContH);
+        //$('#MEAT').click(changeCont);
+        $('#CARBS').click(changeContC);
+        $('#HEALTHY').click(changeContHE);
+        $('#FRESH').click(changeContF);
+        $('#SPICY').click(changeContSP);
+
+    });
+    </script>
 </body>
 </html>

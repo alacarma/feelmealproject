@@ -133,7 +133,7 @@
             }
 
             // Add pager navigation
-            if (base.config.pagerNav)
+/*            if (base.config.pagerNav)
             {
                 base.$elem.append("<ul class='" + base.config.pagerClass + "'>");
                 // Loop through each slide
@@ -148,7 +148,7 @@
                         });
                 });
             }
-
+*/
             // Add data-attribute captions
             $children.each(function () {
                 $innerBase = $(this);
@@ -909,3 +909,23 @@
         });
     };
 }));
+var seconds = 2700;
+
+function secondPassed() {
+  var minutes = Math.round((seconds - 30)/60),
+      remainingSeconds = seconds % 60;
+  
+  if (remainingSeconds < 10) {
+    remainingSeconds = "0" + remainingSeconds;  
+  }
+  
+  document.getElementById('countdown').innerHTML = minutes + ":" + remainingSeconds;
+  if (seconds == 0) {
+    clearInterval(countdownTimer);
+    document.getElementById('countdown').innerHTML = "00:00";
+  } else {
+    seconds--;
+  }
+}
+ 
+var countdownTimer = setInterval('secondPassed()', 1000);
